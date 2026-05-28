@@ -122,18 +122,7 @@ pip list
 
 # 5. Required Imports
 
-The notebook uses the following imports:
-
-```python
-import dpkt                    # Packet manipulation
-from scapy.all import *        # Packet manipulation and crafting
-import pandas as pd            # DataFrames and analysis
-import numpy as np             # Numerical operations
-import binascii                # Binary ↔ ASCII conversions
-import seaborn as sns          # Statistical visualization
-
-sns.set(color_codes=True)
-```
+The notebook mentions them
 
 ---
 
@@ -141,7 +130,7 @@ sns.set(color_codes=True)
 
 ---
 
-# dpkt
+# dpkt 
 
 ## Purpose
 
@@ -278,23 +267,10 @@ jupyter notebook
 
 This opens Jupyter in browser.
 
----
-
-# 8. Recommended Folder Structure
-
-```text
-packet_lab/
-│
-├── notebooks/
-├── pcaps/
-├── outputs/
-├── figures/
-└── README.md
-```
 
 ---
 
-# 9. References and Documentation
+# 8. References and Documentation
 
 ## dpkt
 
@@ -353,7 +329,7 @@ packet_lab/
 
 ---
 
-# 10. Common Troubleshooting
+# 9. Common Troubleshooting
 
 ## Module Not Found Error
 
