@@ -262,7 +262,7 @@ sns.set(color_codes=True)
 Start notebook server:
 
 ```bash
-jupyter notebook
+python -m jupyterlab
 ```
 
 This opens Jupyter in browser.

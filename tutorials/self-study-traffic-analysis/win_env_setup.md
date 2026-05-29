@@ -288,7 +288,7 @@ sns.set(color_codes=True)
 Start notebook server:
 
 ```powershell id="7r5q8v"
-jupyter notebook
+python -m jupyterlab
 ```
 
 This opens Jupyter in browser.

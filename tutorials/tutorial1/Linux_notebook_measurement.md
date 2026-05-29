@@ -162,7 +162,7 @@ Shift + Enter
 Start JupyterLab using terminal:
 
 ```bash id="st8bf7"
-jupyter lab
+python -m jupyterlab
 ```
 
 It will automatically open in your browser.

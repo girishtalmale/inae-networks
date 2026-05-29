@@ -167,7 +167,7 @@ Shift + Enter
 Start JupyterLab using Command Prompt / PowerShell:
 
 ```powershell id="0rjw0g"
-jupyter lab
+python -m jupyterlab
 ```
 
 It will automatically open in your browser.
