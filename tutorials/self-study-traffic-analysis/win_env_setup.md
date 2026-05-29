@@ -392,7 +392,95 @@ Try:
 jupyter notebook --no-browser
 ```
 
+
 Then manually open the displayed localhost URL in browser.
+
+---
+
+To install TShark on Windows, the easiest method is to install the full Wireshark package and include TShark during setup.
+
+## Option 1: Install via Wireshark Installer (Recommended)
+
+1. Download the Windows installer from:
+   [Wireshark Download Page](https://www.wireshark.org/download.html?utm_source=chatgpt.com)
+
+2. Run the installer.
+
+3. During setup:
+
+   * Keep **TShark** selected (it is enabled by default).
+   * Install **Npcap** when prompted (required for packet capture).
+
+4. Finish installation.
+
+5. Open Command Prompt and verify:
+
+```powershell
+tshark -v
+```
+
+You should see version information.
+
+---
+
+## Add TShark to PATH (if command not found)
+
+If `tshark` is not recognized:
+
+1. Locate installation folder, usually:
+
+```text
+C:\Program Files\Wireshark
+```
+
+2. Add it to Windows PATH:
+
+   * Search: “Environment Variables”
+   * Open **Edit the system environment variables**
+   * Environment Variables → Path → Edit → New
+   * Add:
+
+```text
+C:\Program Files\Wireshark
+```
+
+3. Open a new Command Prompt and test again:
+
+```powershell
+tshark -v
+```
+
+---
+
+## Quick Capture Example
+
+List interfaces:
+
+```powershell
+tshark -D
+```
+
+Capture packets on interface 1:
+
+```powershell
+tshark -i 1
+```
+
+Capture only DNS traffic:
+
+```powershell
+tshark -i 1 -f "port 53"
+```
+
+Save capture:
+
+```powershell
+tshark -i 1 -w capture.pcapng
+```
+
+Official package info:
+[Wireshark Official Site](https://www.wireshark.org?utm_source=chatgpt.com)
+
 
 ---
 
