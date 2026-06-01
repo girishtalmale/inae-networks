@@ -7,23 +7,24 @@ client_socket.settimeout(5)
 server_ip = "127.0.0.1"
 server_port = 5000
 
-messages = ["Hello UDP Server",
-            "This is my second message to you",
-            "Do we have a three way handshake",
-            "I guess not, we are UDP",
-            "TCP makes a three way  handshake for a connection",
-            "Slow to talk a word"]
-# Sending Multiple Messages
-for message in messages:
+print("UDP Echo Client Started")
+print("Type 'exit' to quit\n")
 
-    # Send data
+while True:
+    message = input("Enter message: ")
+
+    if message.lower() == "exit":
+        print("Closing client...")
+        break
+
+    # Send message to server
     client_socket.sendto(message.encode(), (server_ip, server_port))
 
-    # Receive response
+    # Receive echo response
     try:
         response, server_addr = client_socket.recvfrom(1024)
         print("Server Response:", response.decode())
     except socket.timeout:
-        print("No response from server.")
+        print("No response from server (timeout)")
 
 client_socket.close()

@@ -39,6 +39,28 @@ You can verify it by running:
 python -c "import socket; print('Socket module available')"
 ```
 
+## Python Files Overview
+
+The folder contains small Python examples that demonstrate socket programming with UDP and TCP.
+
+### UDP Client and Server
+
+* `UDP_server.py` starts a UDP server on port `5000`. It waits for messages from clients and sends a response back to the sender.
+* `UDP_client.py` sends a fixed list of messages to the UDP server and prints the server responses.
+* `UDP_chat_client.py` is an interactive UDP client. You can type messages manually and receive responses from `UDP_server.py`.
+
+UDP is connectionless, so the client sends each message directly without creating a long-running connection first.
+
+### TCP Client and Server
+
+* `TCP_server.py` starts a simple TCP server on `127.0.0.1:1234`. It accepts a connection, receives one message, sends a response, and closes that client connection.
+* `TCP_echo_server.py` starts a threaded TCP echo server on `127.0.0.1:1235`. It can handle multiple clients and echoes received messages back.
+* `TCP_client.py` connects to `127.0.0.1:1235`, sends multiple messages, and prints the responses. This file is intended to run with `TCP_echo_server.py`.
+* `TCP_chat_server.py` starts a multi-client TCP chat server on port `1234`.
+* `TCP_chat_client.py` connects to the TCP chat server and lets a user type chat messages interactively.
+
+TCP is connection-oriented, so the client connects to the server before sending messages.
+
 ## Running the Programs
 
 ### Terminal Usage
@@ -46,6 +68,8 @@ python -c "import socket; print('Socket module available')"
 Socket programs require multiple processes running simultaneously.
 
 Open **two terminal windows**:
+
+### Run the UDP Example
 
 #### Terminal 1 (Server)
 
@@ -61,18 +85,40 @@ python UDP_client.py
 
 The server should be started first so that it is ready to receive messages from the client.
 
-### TCP Examples
+To use the interactive UDP client instead:
+
+```bash
+python UDP_chat_client.py
+```
+
+### Run the TCP Echo Example
 
 TCP examples are also included for reference:
 
+#### Terminal 1 (Server)
+
 ```bash
-python TCP_server.py
+python TCP_echo_server.py
 ```
 
-and in another terminal:
+#### Terminal 2 (Client)
 
 ```bash
 python TCP_client.py
+```
+
+### Run the TCP Chat Example
+
+#### Terminal 1 (Server)
+
+```bash
+python TCP_chat_server.py
+```
+
+#### Terminal 2 and More (Clients)
+
+```bash
+python TCP_chat_client.py
 ```
 
 However, these are provided primarily for comparison and are **not used in the lab exercises**.
@@ -140,4 +186,4 @@ Receives data using UDP.
 
 ---
 
-**Author:** `Mayank` with the assistance of `ChatGPT`
+**Author:** `Mayank` with the assistance of `ChatGPT` and `Codex`
