@@ -1,0 +1,21 @@
+title: "Containerlab: A Faculty Guide to Network Assignment Design"
+author: "Faculty Tutorial"
+logo: ""
+
+execute:
+  execute_notebooks: "off"
+
+html:
+  use_issues_button: false
+  use_repository_button: false
+  use_edit_page_button: false
+
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - deflist
+    - html_image
+
+latex:
+  latex_documents:
+    targetname: containerlab_faculty_guide.tex
