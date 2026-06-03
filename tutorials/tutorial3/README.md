@@ -9,7 +9,7 @@ Before starting the Containerlab exercises, create a personal copy of the reposi
 Repository:
 
 ```text
-https://github.com/Mayankonweb/container-labs/fork
+https://github.com/Mayankonweb/container-labs/
 ```
 
 > **Important:** This repository does not contain the actual lab material. Its purpose is to provide a pre-configured GitHub Codespaces environment so that everyone can start with a consistent setup without spending time installing software or configuring dependencies locally.
@@ -92,13 +92,13 @@ GitHub accounts are free for personal and educational use.
 
 # Step 2 — Fork the Repository
 
-Open:
+Open the link:
 
 ```text
 https://github.com/Mayankonweb/container-labs/fork
 ```
 
-Click the **Fork** button in the upper-right corner.
+
 
 A fork creates a copy of the repository under your GitHub account.
 
