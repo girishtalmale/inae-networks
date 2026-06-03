@@ -1,39 +1,234 @@
-# README — Introduction to Containerlab
+# README — GitHub Codespaces and Containerlab Setup
 
 ## Overview
 
-This lab introduces **Containerlab**, a tool used to create, deploy, and manage virtual network topologies using containers. Containerlab allows networking experiments to be performed on a single machine without requiring multiple physical devices.
+This lab uses **GitHub Codespaces** to provide a consistent Linux development environment and **Containerlab** to build and experiment with virtual network topologies.
 
-Instead of configuring several routers, switches, and hosts physically, Containerlab creates lightweight container-based network nodes and interconnects them according to a topology description.
+Before starting the Containerlab exercises, create a personal copy of the repository and launch a GitHub Codespace.
 
-This makes it possible to:
+Repository:
 
-* Build realistic network topologies quickly
-* Perform networking experiments safely
-* Learn routing, switching, and network protocols
-* Test configurations before deployment
-* Reproduce experiments consistently
+```text
+https://github.com/Mayankonweb/container-labs/fork
+```
+
+> **Important:** This repository does not contain the actual lab material. Its purpose is to provide a pre-configured GitHub Codespaces environment so that everyone can start with a consistent setup without spending time installing software or configuring dependencies locally.
 
 ---
 
-# What is Containerlab?
+# What is GitHub?
 
-Containerlab is an open-source framework that orchestrates container-based network topologies.
+GitHub is a cloud platform built around Git that allows developers to:
 
-A topology can contain:
+* Store code online
+* Track changes over time
+* Collaborate with others
+* Manage project history
+* Share and reproduce projects
 
-* Linux hosts
-* Routers
-* Switches
-* Network appliances
-* Custom Docker containers
+GitHub is widely used in industry, research, and open-source software development.
 
-Containerlab automatically:
+---
 
-* Creates containers
-* Connects them using virtual links
-* Assigns interfaces
-* Builds the desired network topology
+# Why Use GitHub?
+
+GitHub provides:
+
+### Version Control
+
+Track every change made to files and projects.
+
+### Collaboration
+
+Allow multiple people to work on the same project.
+
+### Backup
+
+Store code safely in the cloud.
+
+### Reproducibility
+
+Share projects and environments easily.
+
+### Development Environments
+
+Services such as GitHub Codespaces provide ready-to-use cloud development environments.
+
+---
+
+# Learning Resources
+
+To learn more about Git and GitHub:
+
+### GitHub Skills
+
+https://skills.github.com
+
+### GitHub Documentation
+
+https://docs.github.com
+
+### Introduction to GitHub
+
+https://docs.github.com/en/get-started/start-your-journey/about-github-and-git
+
+### Git Documentation
+
+https://git-scm.com/doc
+
+---
+
+# Step 1 — Create a GitHub Account
+
+If you do not already have a GitHub account, create one at:
+
+```text
+https://github.com
+```
+
+GitHub accounts are free for personal and educational use.
+
+---
+
+# Step 2 — Fork the Repository
+
+Open:
+
+```text
+https://github.com/Mayankonweb/container-labs/fork
+```
+
+Click the **Fork** button in the upper-right corner.
+
+A fork creates a copy of the repository under your GitHub account.
+
+Example:
+
+```text
+Original Repository:
+Mayankonweb/container-labs
+
+Your Fork:
+your-username/container-labs
+```
+
+This allows you to:
+
+* Create your own Codespace
+* Save your work independently
+* Experiment freely without affecting the original repository
+
+---
+
+# What is GitHub Codespaces?
+
+GitHub Codespaces is a cloud-based development environment provided by GitHub.
+
+Each Codespace provides:
+
+* Linux environment
+* VS Code in the browser
+* Terminal access
+* Pre-installed development tools
+* Persistent workspace
+
+Conceptually:
+
+```text
+Your Browser
+      │
+      ▼
+GitHub Codespace
+      │
+      ▼
+Linux Machine in the Cloud
+```
+
+Instead of installing software locally, you work directly inside a cloud-hosted Linux machine.
+
+---
+
+# Why Use GitHub Codespaces?
+
+Codespaces simplify setup significantly.
+
+Advantages include:
+
+* No local software installation
+* Consistent environment across systems
+* Browser-based development
+* Integrated terminal
+* GitHub integration
+* Easy access from any machine
+
+---
+
+# Step 3 — Create a Codespace
+
+After creating your fork:
+
+1. Open your forked repository.
+2. Click the green **Code** button.
+3. Select the **Codespaces** tab.
+4. Click **Create codespace on main**.
+
+GitHub will create and start a cloud development environment.
+
+The first launch may take a few minutes.
+
+---
+
+# Step 4 — Verify the Environment
+
+Once the Codespace opens, open the integrated terminal and run:
+
+```bash
+pwd
+```
+
+```bash
+ls
+```
+
+You should see the contents of your forked repository.
+
+---
+
+# Working Inside the Codespace
+
+The Codespace provides:
+
+* File explorer
+* VS Code editor
+* Integrated terminal
+* Git integration
+* Linux shell environment
+
+Example commands:
+
+```bash
+mkdir test
+```
+
+```bash
+cd test
+```
+
+```bash
+git status
+```
+
+```bash
+python --version
+```
+
+---
+
+# Introduction to Containerlab
+
+Containerlab is an open-source framework used to create, deploy, and manage container-based network topologies.
+
+Instead of requiring multiple physical routers, switches, and hosts, Containerlab creates lightweight virtual network devices using containers.
 
 A simple topology might look like:
 
@@ -41,13 +236,18 @@ A simple topology might look like:
 Client ───── Router ───── Server
 ```
 
-while more complex topologies may contain dozens of interconnected nodes.
+Containerlab automatically:
+
+* Creates containers
+* Connects network links
+* Assigns interfaces
+* Deploys complete network topologies
 
 ---
 
 # Why Use Containerlab?
 
-Containerlab provides several advantages:
+Containerlab provides several advantages.
 
 ### Lightweight
 
@@ -55,33 +255,35 @@ Containers consume significantly fewer resources than virtual machines.
 
 ### Fast Deployment
 
-Entire network topologies can be created in seconds.
+Network topologies can be created within seconds.
 
 ### Reproducibility
 
-The same topology definition can be deployed repeatedly with identical results.
+The same topology can be recreated repeatedly.
 
 ### Safe Experimentation
 
-Experiments can be performed without affecting production networks.
+Experiments can be performed without affecting production systems.
 
 ### Automation Friendly
 
-Topologies can be created, modified, and removed programmatically.
+Topologies can be created and removed programmatically.
 
 ---
 
-# Learning Material
+# Containerlab Learning Material
 
 Detailed learning material is available through either of the following methods.
 
-## Option 1 — Hosted Learning Material
+## Option 1 — Hosted Documentation
 
-Open the following address in a web browser:
+Open:
 
 ```text
 10.208.20.119:8888
 ```
+
+in a web browser.
 
 ---
 
@@ -93,7 +295,7 @@ Open the following file in a web browser:
 tutorials/tutorial3/containerlab-site/index.html
 ```
 
-This documentation contains:
+The documentation contains:
 
 * Containerlab fundamentals
 * Topology definitions
@@ -103,110 +305,14 @@ This documentation contains:
 
 ---
 
-# Accessing Remote Systems Using SSH
-
-Many Containerlab deployments and networking experiments are performed on remote Linux systems.
-
-SSH (Secure Shell) allows you to securely connect to a remote machine through a terminal.
-
-General syntax:
-
-```bash
-ssh username@hostname
-```
-
-Example:
-
-```bash
-ssh user@10.20.251.231
-```
-
-After authentication, commands are executed on the remote system rather than on the local machine.
-
----
-
-# Checking SSH Availability
-
-## Windows
-
-Open Command Prompt or PowerShell and run:
-
-```powershell
-ssh -V
-```
-
-Expected output:
-
-```text
-OpenSSH_for_Windows_x.x
-```
-
-If SSH is available, no additional installation is required.
-
----
-
-## Optional: Installing PuTTY on Windows
-
-If SSH is unavailable, PuTTY may be installed.
-
-PuTTY provides:
-
-* SSH terminal access
-* Saved sessions
-* Graphical connection management
-
-However, modern versions of Windows typically include OpenSSH by default, allowing direct use from:
-
-* Command Prompt
-* PowerShell
-* Windows Terminal
-
-without requiring PuTTY.
-
----
-
-## macOS
-
-Open Terminal and run:
-
-```bash
-ssh -V
-```
-
-SSH is included by default on macOS.
-
-No additional software is typically required.
-
----
-
-## Linux
-
-Most Linux distributions include SSH by default.
-
-Verify using:
-
-```bash
-ssh -V
-```
-
----
-
 # Basic Linux Commands
 
-The following commands are frequently used during networking labs.
+These commands are frequently used throughout the labs.
 
----
-
-## Display Current Directory
+## Current Directory
 
 ```bash
 pwd
-```
-
-Example:
-
-```text
-/home/user
 ```
 
 ---
@@ -225,16 +331,10 @@ ls -l
 
 ---
 
-## Create a Directory
+## Create Directory
 
 ```bash
 mkdir my_directory
-```
-
-Example:
-
-```bash
-mkdir containerlab
 ```
 
 ---
@@ -242,16 +342,16 @@ mkdir containerlab
 ## Change Directory
 
 ```bash
-cd containerlab
+cd my_directory
 ```
 
-Move to parent directory:
+Parent directory:
 
 ```bash
 cd ..
 ```
 
-Move to home directory:
+Home directory:
 
 ```bash
 cd ~
@@ -259,7 +359,7 @@ cd ~
 
 ---
 
-## Create a File
+## Create File
 
 ```bash
 touch file.txt
@@ -267,7 +367,7 @@ touch file.txt
 
 ---
 
-## Remove a File
+## Remove File
 
 ```bash
 rm file.txt
@@ -275,11 +375,11 @@ rm file.txt
 
 ---
 
-# Installing Git
+# Installing Git (Optional)
 
-Git is commonly used to obtain lab material and source code.
+Git is usually pre-installed in GitHub Codespaces.
 
-## Ubuntu/Debian
+On Ubuntu or Debian systems:
 
 ```bash
 sudo apt update
@@ -299,7 +399,7 @@ git --version
 General syntax:
 
 ```bash
-git clone <repository_url>
+git clone <repository-url>
 ```
 
 Example:
@@ -307,8 +407,6 @@ Example:
 ```bash
 git clone https://github.com/example/repository.git
 ```
-
-This creates a local copy of the repository.
 
 ---
 
@@ -333,13 +431,11 @@ topology:
       kind: linux
 ```
 
-Containerlab reads the topology description and deploys the specified nodes and links.
+Containerlab reads the topology file and deploys the specified network.
 
 ---
 
 # Executing Commands Inside Containers
-
-After deployment, commands can be executed inside running containers.
 
 Example:
 
@@ -347,32 +443,13 @@ Example:
 sudo docker exec clab-linear-client ping -c 4 10.0.2.1
 ```
 
----
-
-## Understanding the Command
-
-```bash
-sudo docker exec clab-linear-client ping -c 4 10.0.2.1
-```
-
-Breakdown:
-
-| Component          | Meaning                                    |
-| ------------------ | ------------------------------------------ |
-| sudo               | Execute with administrative privileges     |
-| docker exec        | Run a command inside an existing container |
-| clab-linear-client | Container name                             |
-| ping               | Network testing utility                    |
-| -c 4               | Send 4 ICMP Echo Requests                  |
-| 10.0.2.1           | Destination IP address                     |
-
-The command executes:
+This command executes:
 
 ```bash
 ping -c 4 10.0.2.1
 ```
 
-inside the container named:
+inside the container:
 
 ```text
 clab-linear-client
@@ -382,9 +459,7 @@ rather than on the host machine.
 
 ---
 
-# Opening an Interactive Shell Inside a Container
-
-Sometimes multiple commands need to be executed inside a container.
+# Opening an Interactive Container Shell
 
 Example:
 
@@ -392,13 +467,7 @@ Example:
 sudo docker exec -it clab-linear-client sh
 ```
 
----
-
-## Understanding the Command
-
-```bash
-sudo docker exec -it clab-linear-client sh
-```
+Breakdown:
 
 | Component          | Meaning                          |
 | ------------------ | -------------------------------- |
@@ -409,15 +478,7 @@ sudo docker exec -it clab-linear-client sh
 | clab-linear-client | Container name                   |
 | sh                 | Launch shell                     |
 
-After execution, the terminal changes into the container environment.
-
-Example:
-
-```text
-/ #
-```
-
-At this point commands are running inside the container.
+After execution, you are operating inside the container.
 
 Examples:
 
@@ -433,7 +494,7 @@ ip route
 ping 10.0.2.1
 ```
 
-To exit:
+Exit using:
 
 ```bash
 exit
@@ -443,15 +504,13 @@ exit
 
 # Summary
 
-By the end of this lab you should be able to:
+Before beginning the Containerlab exercises:
 
-* Understand the purpose of Containerlab
-* Deploy simple container-based network topologies
-* Access remote systems using SSH
-* Navigate Linux systems using common commands
-* Clone repositories using Git
-* Execute commands inside containers
-* Open interactive container shells
-* Verify connectivity between network nodes
+* Create a GitHub account
+* Fork the repository
+* Create a GitHub Codespace from your fork
+* Verify terminal access
+* Familiarize yourself with basic Linux commands
+* Review the Containerlab learning material
 
-The accompanying Containerlab learning material provides deeper explanations, examples, and exercises for further exploration.
+After completing these steps, you will be ready to deploy and experiment with Containerlab network topologies in a consistent cloud-based Linux environment.
